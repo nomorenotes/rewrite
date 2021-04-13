@@ -24,6 +24,6 @@ jobs:
         run: |
           git add .
           git reset .github
-          git config user.name "github-actions"
-          git commit -m "actions"
+          git config user.name "$GITHUB_WORKFLOW"
+          git commit -m "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           git push
