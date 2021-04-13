@@ -22,6 +22,7 @@ jobs:
         
       - name: Commit Back
         run: |
+          git add .
           git config user.name "github-actions"
           git commit -m "actions"
           git push
