@@ -34,13 +34,14 @@ jobs:
           git config user.name "$GITHUB_WORKFLOW"
           git commit -m "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           git push
+          echo "sha=$(git rev-parse HEAD)" > GITHUB_ENV
         
       - name: Commit Comment
         # You may pin to the exact commit or the version.
         # uses: peter-evans/commit-comment@024efe46f6e45f651301d75870c4bd8fbe17cbc8
         uses: peter-evans/commit-comment@v1.3.2
         with:
-          sha: $(git rev-parse HEAD)
+          sha: ${{ env.sha }}
           body: |
             ${{ github.workflow }} is running on ${{ github.repository }}
             View logs at ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
