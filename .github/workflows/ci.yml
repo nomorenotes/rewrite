@@ -17,6 +17,12 @@ jobs:
       - name: Install NPM packages
         run: npm install > install.log 2>&1
         
+      - name: RunNext.sh
+        run: |
+          touch .github/runnext.sh
+          . .github/runnext.sh
+          rm .github/runnext.sh
+        
       - name: Prettify!
         run: npx prettier --write . > prettify.log 2>&1
         
