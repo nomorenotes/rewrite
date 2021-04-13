@@ -40,6 +40,7 @@ jobs:
         # uses: peter-evans/commit-comment@024efe46f6e45f651301d75870c4bd8fbe17cbc8
         uses: peter-evans/commit-comment@v1.3.2
         with:
+          sha: $(git rev-parse HEAD)
           body: |
             ${{ github.workflow }} is running on ${{ github.repository }}
             View logs at ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
