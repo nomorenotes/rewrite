@@ -15,16 +15,17 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install NPM packages
-        run: npm install > install.log 2>&1
+        run: npm install 2>&1 | tee .github/install.log
         
       - name: RunNext.sh
         run: |
-          touch .github/runnext.sh
-          . .github/runnext.sh
+          rm -f .github/runnext.log
+          [ -f .github/runnext.sh ] || exit 0
+          . .github/runnext.sh | tee .github/runnext.log
           rm .github/runnext.sh
         
       - name: Prettify!
-        run: npx prettier --write . > prettify.log 2>&1
+        run: npx prettier --write . 2>&1 | tee .github/prettify.log
         
       - name: Commit Back
         run: |
