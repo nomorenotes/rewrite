@@ -1,0 +1,11 @@
+npm WARN saveError ENOENT: no such file or directory, open '/home/runner/work/rewrite/rewrite/package.json'
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN enoent ENOENT: no such file or directory, open '/home/runner/work/rewrite/rewrite/package.json'
+npm WARN rewrite No description
+npm WARN rewrite No repository field.
+npm WARN rewrite No README data
+npm WARN rewrite No license field.
+
+up to date in 0.23s
+found 0 vulnerabilities
+
