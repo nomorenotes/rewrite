@@ -29,7 +29,7 @@ jobs:
       - name: Commit Back
         run: |
           git add .
-          git reset .github/workspace
+          git reset .github/workflows
           git config user.name "$GITHUB_WORKFLOW"
           git commit -m "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           git push
