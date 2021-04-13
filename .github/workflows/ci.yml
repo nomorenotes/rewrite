@@ -19,3 +19,8 @@ jobs:
         
       - name: Prettify!
         run: npx prettier --write . > prettify.log 2>&1
+        
+      - name: Commit Back
+        run: >
+          git commit -m "actions"
+          git push
