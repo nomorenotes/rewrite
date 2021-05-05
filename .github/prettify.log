@@ -1,4 +1,4 @@
-npx: installed 1 in 1.249s
-.github/workflows/ci.yml 36ms
-package-lock.json 47ms
-README.md 25ms
+npx: installed 1 in 1.355s
+.github/workflows/ci.yml 37ms
+package-lock.json 46ms
+README.md 23ms
